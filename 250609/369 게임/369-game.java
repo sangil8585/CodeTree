@@ -8,7 +8,7 @@ public class Main {
 
         for(int i = 1; i <= N; i++) {
             
-            if(i%3 == 0) {
+            if(i%3 == 0 || i%10 == 3 || i%10 == 6 || i%10 == 9) {
                 System.out.print(0 + " ");
             } else {
                 System.out.print(i + " ");
