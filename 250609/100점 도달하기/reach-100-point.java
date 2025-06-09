@@ -13,7 +13,7 @@ public class Main {
                 System.out.print("B ");
             } else if (i >= 70) {
                 System.out.print("C ");
-            } else if (i > 60) {
+            } else if (i >= 60) {
                 System.out.print("D ");
             } else if (i < 60) {
                 System.out.print("F ");
