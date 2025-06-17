@@ -14,16 +14,18 @@ public class Main {
         }
 
         double avg = sum / N;
+        double roundedAvg = Math.round(avg * 10) / 10.0;
         String result;
 
-        if (avg > 3.0 && avg < 4.0) {
-            result = "Good";
-        } else if (avg < 3.0) {
-            result = "Poor";
-        } else {
+        if (roundedAvg >= 4.0) {
             result = "Perfect";
+        } else if (roundedAvg >= 3.0) {
+            result = "Good";
+        } else {
+            result = "Poor";
         }
-        System.out.printf("%.1f\n", avg);
+
+        System.out.printf("%.1f\n", roundedAvg);
         System.out.println(result);
     }
 }
