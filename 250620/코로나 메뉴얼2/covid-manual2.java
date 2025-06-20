@@ -19,8 +19,9 @@ public class Main {
             } else {
                 d++;
             }
-            System.out.print(a + " " + b + " " + c + " " + d);
+            
         }
+        System.out.print(a + " " + b + " " + c + " " + d);
 
         if (a >= 2) {
             System.out.print(" E");
