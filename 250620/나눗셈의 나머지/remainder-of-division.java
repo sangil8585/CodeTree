@@ -10,7 +10,7 @@ public class Main {
         int[] arr = new int[B];
         int sum = 0;
 
-        while(A>0) {
+        while(true) {
             int num = A % B;
             arr[num]++;
 
