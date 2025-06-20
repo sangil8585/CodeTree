@@ -15,6 +15,9 @@ public class Main {
             arr[num]++;
 
             A = A / B;
+            if(A == 0) {
+                break;
+            }
         }
 
         for(int i = 0; i < B; i++) {
