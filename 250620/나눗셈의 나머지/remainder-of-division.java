@@ -10,17 +10,14 @@ public class Main {
         int[] arr = new int[B];
         int sum = 0;
 
-        while(true) {
-            int num = A % B;
-            arr[num]++;
-
+        while (true) {
+            int remainder = A % B;
+            arr[remainder]++;
             A = A / B;
-            if(A == 0) {
-                break;
-            }
+            if (A == 0) break;
         }
 
-        for(int i = 0; i < B; i++) {
+        for (int i = 0; i < B; i++) {
             sum += arr[i] * arr[i];
         }
 
