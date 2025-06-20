@@ -24,6 +24,6 @@ public class Main {
             sum += arr[i] * arr[i];
         }
 
-        System.out.print(sum);
+        System.out.println(sum);
     }
 }
