@@ -5,19 +5,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         char[] arr = new char[]{'L', 'E', 'B', 'R', 'O', 'S'};
+        int idx = -1;
         char input = sc.next().charAt(0);
-
-        boolean found = false;
 
         for(int i = 0; i < arr.length; i++) {
             if (arr[i] == input) {
-                System.out.print(i);
-                found = true;
+                idx = i;
                 break;
             }
         }
-        if (found == false) {
-            System.out.print("None");
-        }
+        System.out.print(idx != -1 ? idx : "None");
     }
 }
