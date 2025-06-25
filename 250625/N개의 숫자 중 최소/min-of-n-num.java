@@ -13,6 +13,8 @@ public class Main {
             arr[i] = sc.nextInt();
             if(arr[i] < maxInt) {
                 maxInt = arr[i];
+                cnt = 1;
+            } else if (arr[i] == maxInt) {
                 cnt++;
             }
         }
