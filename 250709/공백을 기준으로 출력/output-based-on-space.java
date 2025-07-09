@@ -7,7 +7,18 @@ public class Main {
         String str1 = sc.nextLine();
         String str2 = sc.nextLine();
 
-        System.out.print(str1.replace(" ", ""));
-        System.out.print(str2.replace(" ", ""));
+        for (int i = 0; i < str1.length(); i++) {
+            if(str1.charAt(i) != ' ') {
+                System.out.print(str1.charAt(i));
+            }
+        }
+
+        for (int i = 0; i < str2.length(); i++) {
+            if(str2.charAt(i) != '') {
+                System.out.print(str2.charAt(i));
+            }
+        }
+        // System.out.print(str1.replace(" ", ""));
+        // System.out.print(str2.replace(" ", ""));
     }
 }
