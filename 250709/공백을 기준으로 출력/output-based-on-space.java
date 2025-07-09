@@ -14,7 +14,7 @@ public class Main {
         }
 
         for (int i = 0; i < str2.length(); i++) {
-            if(str2.charAt(i) != '') {
+            if(str2.charAt(i) != ' ') {
                 System.out.print(str2.charAt(i));
             }
         }
