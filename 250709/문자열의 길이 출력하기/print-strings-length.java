@@ -4,11 +4,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        String str = sc.next();
-        int cnt = 0;
-        for(int i = 0; i < 2; i++){
-            cnt += str.length()-1;
-        }
-        System.out.println(cnt);
+        String str1 = sc.next();
+        String str2 = sc.next();
+        
+        System.out.println(str1.length() + str2.length());
     }
 }
