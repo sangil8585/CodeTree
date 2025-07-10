@@ -7,7 +7,9 @@ public class Main {
         String n = sc.next();
         int m = sc.nextInt();
 
-        for(int i = n.length()-1; i >= n.length()-m; i--) {
+        int count = Math.min(m, n.length());
+
+        for(int i = n.length() - 1; i >= n.length() - count; i--) {
             System.out.print(n.charAt(i));
         }
     }
