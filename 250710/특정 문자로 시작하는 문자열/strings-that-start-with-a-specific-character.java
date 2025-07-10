@@ -13,20 +13,16 @@ public class Main {
 
         String word = sc.next();
         int cnt = 0;
-        double total = 0;
-        double avg = 0;
+        int total = 0;
         
-        for(int i = 0; i < n; i++) {
-            total += arr[i].length();
-            for(int j = 0; j < arr[i].length(); j++) {
-                if (arr[i].charAt(j) == word.charAt(0)) {
-                    cnt++;
-                }
+        for (int i = 0; i < n; i++) {
+            if (arr[i].charAt(0) == word.charAt(0)) {
+                cnt++;
+                total += arr[i].length();
             }
         }
-        avg = total / n;
-        int intpart = (int) avg;
-        System.out.print(cnt + " ");
-        System.out.printf("%.2f", (double) intpart);
+        double avg = (double) total / cnt;
+        
+        System.out.printf("%d %.2f", cnt, avg);
     }
 }
