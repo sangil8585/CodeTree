@@ -7,17 +7,15 @@ public class Main {
         String a = sc.next();
         String b = sc.next();
 
-        int cnt = 0;
+        int cnt = -1;
         
-        for(int i = 0; i < a.length()-1; i++) {
-            if(a.substring(i, i+2).equals(b)) {
-                cnt++;
+        for (int i = 0; i <= a.length() - b.length(); i++) {
+            if (a.substring(i, i + b.length()).equals(b)) {
+                cnt = i;
+                break;
             }
         }
-        if(cnt == 0) {
-            System.out.print(-1);
-        } else {
-            System.out.print(cnt);
-        }
+        
+        System.out.print(cnt);
     }
 }
