@@ -12,13 +12,10 @@ public class Main {
             if (a.substring(i, i + 2).equals("ee")) {
                 cnt1++;
             }
-        }
-        for (int i = 0; i < a.length() - 1; i++) {
             if (a.substring(i, i + 2).equals("eb")) {
                 cnt2++;
             }
         }
-        
 
         System.out.print(cnt1 + " " + cnt2);
         
