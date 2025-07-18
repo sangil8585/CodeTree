@@ -7,7 +7,12 @@ public class Main {
         String a = sc.next();
         String b = sc.next();
 
-        b = a.subString(0, 1);
+        char[] arr = b.toCharArray();
+        arr[0] = a.charAt(0);
+        arr[1] = a.charAt(1);
+
+        b = String.valueOf(arr);
+
         System.out.print(b);
         
     }
