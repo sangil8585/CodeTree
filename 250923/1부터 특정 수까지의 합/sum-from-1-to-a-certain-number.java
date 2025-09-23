@@ -2,9 +2,10 @@ import java.util.Scanner;
 public class Main {
     public static int cal(int a) {
         int calcul = 0;
-        for(int i = 1; i <= a; i++) 
-            return calcul += i;    
-        
+        for(int i = 1; i <= a; i++) {
+            calcul += i;    
+        }
+        return calcul / 10;
     }
 
     public static void main(String[] args) {
