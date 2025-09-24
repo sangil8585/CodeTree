@@ -5,17 +5,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
+        int cnt = cal(a, b);
+        System.out.print(cnt);
+    }
+
+    public static int cal(int l, int r) {
         int cnt = 0;
-        for(int i = a; i <= b; i++) {
+        for(int i = l; i <= r; i++) {
             if(isPrime(i)) {
                 cnt += i;
             }
         }
-        System.out.print(cnt);
+        
+        return cnt;
     }
 
     public static boolean isPrime(int n) {
-        
         if(n < 2) {
             return false;
         }
