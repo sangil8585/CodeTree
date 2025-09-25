@@ -25,6 +25,7 @@ public class Main {
                 System.out.print("False");
                 return;
         }
+        System.out.print(a + " " + o + " " + c + " = " + sum);
     }
 
     public static int plus(int x, int y) {
