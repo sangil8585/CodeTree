@@ -1,30 +1,39 @@
 import java.util.Scanner;
 
+class IntWrap {
+    int val;
+
+    public IntWrap(int val) {
+        this.val = val;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        int[] result = calcu(a, b);
-        System.out.print(result[0] + " " + result[1]);
+        IntWrap aWrap = new IntWrap(a);
+        IntWrap bWrap = new IntWrap(b);
+
+        calcu(aWrap, bWrap);
+
+        a = aWrap.val;
+        b = bWrap.val;
+
+        System.out.print(a + " " + b);
     }
 
-    public static int[] calcu(int a, int b) {
-        int add = 25;
-        int mul = 2;
-
-        int aResult = 0;
-        int bResult = 0;
-
-        if (a >= b) {
-            aResult = a + add;
-            bResult = b * mul;
+    public static void calcu(IntWrap a, IntWrap b) {
+        if (a.val > b.val) {
+            b.val *= 2;
+            a.val += 25;
         } else {
-            aResult = a * mul;
-            bResult = b + add;
+            a.val *= 2;
+            b.val += 25;
         }
 
-        return new int[]{aResult, bResult};
+        return;
     }
 }
