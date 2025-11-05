@@ -5,24 +5,26 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        
-        plus(a, b);
+
+        int[] result = calcu(a, b);
+        System.out.print(result[0] + " " + result[1]);
     }
 
-    public static void plus(int a, int b) {
-        int big = 0;
-        int small = 0;
-        if (a > b) {
-            big = a;
-            small = b;
+    public static int[] calcu(int a, int b) {
+        int add = 25;
+        int mul = 2;
+
+        int aResult = 0;
+        int bResult = 0;
+
+        if (a >= b) {
+            aResult = a + add;
+            bResult = b * mul;
         } else {
-            big = b;
-            small = a;
+            aResult = a * mul;
+            bResult = b + add;
         }
 
-        int bigResult = big + 25;
-        int smallResult = small * 2;
-
-        System.out.print(smallResult + " " + bigResult);
+        return new int[]{aResult, bResult};
     }
 }
