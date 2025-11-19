@@ -3,20 +3,24 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        printUp(1, n);   
+        num1(n);
         System.out.println();
-        printDown(n);    
+        num2(n);
     }
 
-    public static void printUp(int cur, int n) {
-        if(cur > n) return;
-        System.out.print(cur + " ");
-        printUp(cur + 1, n);
+    public static void num1(int n) {
+        if(n == 0) {
+            return;
+        }
+        num1(n-1);
+        System.out.print(n+" ");
     }
 
-    public static void printDown(int n) {
-        if(n == 0) return;
-        System.out.print(n + " ");
-        printDown(n - 1);
+    public static void num2(int n) {
+        if(n == 0) {
+            return;
+        }
+        System.out.print(n+" ");
+        num2(n-1);
     }
 }
