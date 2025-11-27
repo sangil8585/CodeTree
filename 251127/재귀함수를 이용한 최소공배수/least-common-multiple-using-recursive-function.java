@@ -17,7 +17,7 @@ public class Main {
     private static int gcd(int a, int b) {
         if(b == 0) return a;
 
-        return gcd(a, a%b);
+        return gcd(b, a%b);
     }
 
     // 최소공배수
@@ -27,7 +27,7 @@ public class Main {
 
     private static int result(int[] arr, int num) {
         if(num == arr.length-1) {
-            retrun arr[num];
+            return arr[num];
         }
         // 인덱스 arr[0], arr[1]을 gcd(arr[0], arr[1])로 돌리고 돌린다.
         // arr[0], arr[1]의 값을 더한다 => plusNum
