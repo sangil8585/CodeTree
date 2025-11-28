@@ -17,7 +17,7 @@ public class Main {
     }
 
     public static void asc(int[] arr) {
-        Arrays.sort(arr, 1, arr.length);
+        Arrays.sort(arr, 0, arr.length);
         for(int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + " ");
         }
