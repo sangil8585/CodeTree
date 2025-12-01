@@ -3,23 +3,23 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        int N = sc.nextInt();
-        int[] nums = new int[2 * N];
-
-        for (int i = 0; i < 2 * N; i++) {
+        int n = sc.nextInt();
+        int[] nums = new int[2 * n];
+        for (int i = 0; i < nums.length; i++) {
             nums[i] = sc.nextInt();
         }
+        Arrays.sort(nums, 0, nums.length);
+        
+        int maxSum = 0;
+        int numLen = nums.length;
 
-        Arrays.sort(nums);
-
-        int result = 0;
-
-        for (int i = 0; i < N; i++) {
-            int sum = nums[i] + nums[2 * N - 1 - i];
-            result = Math.max(result, sum);
+        for (int i = 0; i < nums.length; i++) {
+            int sum = nums[i] + nums[numLen - 1 - i];
+            if(maxSum < sum) {
+                maxSum = sum;
+            }
         }
 
-        System.out.println(result);
+        System.out.print(maxSum);
     }
 }
