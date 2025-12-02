@@ -10,7 +10,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             words[i] = sc.next();
         }
-        // 1. ap로 시작하는 단어만 사전 순 정렬
+        
         Arrays.sort(words);
         int cnt = 0;
 
