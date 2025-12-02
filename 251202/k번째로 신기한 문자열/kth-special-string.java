@@ -11,14 +11,17 @@ public class Main {
             words[i] = sc.next();
         }
         // 1. ap로 시작하는 단어만 사전 순 정렬
-        Arrays.sort(words);        
+        Arrays.sort(words);
+        int cnt = 0;
+
         for (int i = 0; i < n; i++) {
-            if(words[i].contains("ap")) {
-                System.out.println(words[k]);
-                break;
+            if(words[i].startsWith(t)) {
+                cnt++;
+                if (cnt == k) {
+                    System.out.println(words[i]);
+                    break;
+                }
             }
         }
-        
-        
     }
 }
