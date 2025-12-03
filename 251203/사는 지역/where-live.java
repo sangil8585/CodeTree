@@ -12,8 +12,8 @@ class User implements Comparable<User> {
     }
 
     @Override
-    public int compareTo(User other) {
-        return this.name.compareTo(other.name);
+    public int compareTo(User user) {
+        return this.name.compareTo(user.name);
     }
 }
 
