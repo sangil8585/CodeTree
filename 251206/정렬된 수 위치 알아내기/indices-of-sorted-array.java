@@ -25,7 +25,7 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             int originalIndex = arr[i][1];
-            answer[originalIndex] = i + 1; ㅇ
+            answer[originalIndex] = i + 1;
         }
 
         StringBuilder sb = new StringBuilder();
