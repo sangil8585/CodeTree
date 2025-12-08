@@ -9,30 +9,14 @@ public class Main {
         int hour = 11;
         int min = 11;
 
-        int elaspedTime = 0;
-        while(true) {
-            if(day == A && hour == B && min == C) {
-                break;
-            }
+        int startDay = day * 24 * 60 + hour * 60 + min;
+        int endDay = A * 24 * 60 + B * 60 + C;
 
-            if(day >= A && hour >= B && min > C) {
-                System.out.print(-1);
-                return;
-            }
-
-            elaspedTime++;
-            min++;
-
-            if(min == 60) {
-                hour++;
-                min = 0;
-            }
-
-            if(hour == 24) {
-                day++;
-                hour = 0;
-            }
+        if(startDay > endDay) {
+            System.out.print(-1);
+            return;
         }
-        System.out.print(elaspedTime);
+
+        System.out.print(endDay - startDay);
     }
 }
