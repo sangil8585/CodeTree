@@ -17,6 +17,7 @@ public class Main {
 
             if(day >= A && hour >= B && min > C) {
                 System.out.print(-1);
+                return;
             }
 
             elaspedTime++;
