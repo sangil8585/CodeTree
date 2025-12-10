@@ -9,7 +9,7 @@ public class Main {
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();
             for(int j = x1; j < x2; j++) {
-                arr[j+ 100]++;
+                arr[j+ 100]++; // 음수를 방지하기 위함
             }
         }
 
@@ -19,6 +19,7 @@ public class Main {
                 max = arr[i];
             }
         }
+        
         System.out.print(max);
     }
 }
