@@ -9,7 +9,7 @@ public class Main {
         
         Map<Integer, Integer> remainderCount = new HashMap<>();
         
-        while (A > 0) {
+        while (A > 1) {
             int remainder = A % B;  // 나머지 계산
             
             remainderCount.put(remainder, remainderCount.getOrDefault(remainder, 0) + 1);
